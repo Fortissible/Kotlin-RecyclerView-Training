@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:backgroundTint="#dddddd"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="32dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/rv_item_imageview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            tools:src="@tools:sample/avatars"
+            />
+
+        <TextView
+            android:id="@+id/rv_item_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/rv_item_imageview"
+            app:layout_constraintTop_toTopOf="@id/rv_item_imageview"
+            tools:text="Nama Pahlawanku" />
+
+        <TextView
+            android:id="@+id/rv_item_birth_death_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/rv_item_imageview"
+            app:layout_constraintTop_toBottomOf="@id/rv_item_name_tv"
+            app:layout_constraintBottom_toTopOf="@id/rv_item_asal_daerah_tv"
+            tools:text="Tanggal Lahir - Tanggal Wafat" />
+
+        <TextView
+            android:id="@+id/rv_item_asal_daerah_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/rv_item_imageview"
+            app:layout_constraintTop_toBottomOf="@id/rv_item_birth_death_tv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Asal Daerah" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
